@@ -1,54 +1,49 @@
-
 "use strict";
 
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 const yearElement = document.getElementById("year");
-const linkedinLink = document.getElementById("linkedin-link");
 
-// Update the footer year automatically.
 if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+  yearElement.textContent = String(new Date().getFullYear());
 }
 
-// Mobile navigation menu.
 if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("open");
+  const setMenuOpen = (isOpen) => {
+    navLinks.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+    const icon = menuToggle.querySelector(".menu-icon");
+    if (icon) icon.textContent = isOpen ? "✕" : "☰";
+  };
 
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen ? "Close navigation menu" : "Open navigation menu"
-        );
-        menuToggle.textContent = isOpen ? "✕" : "☰";
-    });
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    setMenuOpen(!isOpen);
+  });
 
-    // Close the menu when a navigation link is selected.
-    navLinks.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("open");
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.setAttribute("aria-label", "Open navigation menu");
-            menuToggle.textContent = "☰";
-        });
-    });
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
 
-    // Close the menu when the Escape key is pressed.
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            navLinks.classList.remove("open");
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.setAttribute("aria-label", "Open navigation menu");
-            menuToggle.textContent = "☰";
-        }
-    });
-}
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
 
-// Avoid sending visitors to a placeholder LinkedIn destination.
-if (linkedinLink) {
-    linkedinLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        alert("Add your actual LinkedIn profile URL to index.html first.");
-    });
+  document.addEventListener("click", (event) => {
+    if (
+      menuToggle.getAttribute("aria-expanded") === "true" &&
+      !navLinks.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+      setMenuOpen(false);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 720) setMenuOpen(false);
+  });
 }

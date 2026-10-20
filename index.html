@@ -1,328 +1,190 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fiyinfoluwa Aladetoye's backend developer portfolio, projects, and technical skills.">
-    <meta name="theme-color" content="#0b1120">
-    <title>Fiyinfoluwa Aladetoye | Backend Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fiyinfoluwa Aladetoye (Wizzy), an HND 2 student and junior backend developer focused on Node.js, Express.js, MongoDB, REST APIs, and API testing.">
+  <meta name="theme-color" content="#0a1020">
+  <meta property="og:title" content="Fiyinfoluwa Aladetoye | Backend Developer">
+  <meta property="og:description" content="Backend projects, API testing evidence, and technical skills by Fiyinfoluwa Aladetoye.">
+  <meta property="og:type" content="website">
+  <title>Fiyinfoluwa Aladetoye | Backend Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="header">
-        <nav class="navbar container" aria-label="Main navigation">
-            <a href="#home" class="logo">Wizzy<span>.</span></a>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Wizzy home">Wizzy<span>.</span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="menu-icon" aria-hidden="true">☰</span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#evidence">Testing evidence</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <button class="menu-toggle" id="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="nav-links">
-                ☰
-            </button>
+  <main id="main">
+    <section class="hero container section-anchor" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> HELLO, WORLD! I'M</p>
+        <h1 id="hero-title">Fiyinfoluwa <span>Aladetoye</span></h1>
+        <p class="hero-role">Junior Backend Developer <span class="role-dot">·</span> Node.js &amp; REST APIs</p>
+        <p class="hero-description">
+          I'm an HND 2 student in Software and Web Development, learning to build useful backend applications with Node.js, Express.js, and MongoDB. I enjoy turning requirements into API routes, working with data, and testing how an application behaves when requests succeed or fail.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my projects <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="#contact">Contact me</a>
+        </div>
+        <p class="availability"><span class="status-dot" aria-hidden="true"></span> Open to junior opportunities, internships, and collaboration</p>
+      </div>
 
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- HERO -->
-        <section class="hero container" id="home">
-            <div class="hero-content">
-                <p class="eyebrow">HELLO, WORLD! I'M</p>
-
-                <h1>Fiyinfoluwa <span>Aladetoye</span></h1>
-
-                <h2>Junior Backend Developer</h2>
-
-                <p class="hero-description">
-                    I'm an HND graduate in Software and Web Development,
-                    passionate about building REST APIs, managing databases,
-                    and developing secure and reliable backend applications.
-                    I'm continuously learning and turning ideas into working software.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        Explore My Projects
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        Contact Me
-                    </a>
-                </div>
-
-                <p class="availability">
-                    <span class="status-dot"></span>
-                    Open to opportunities and collaboration
-                </p>
-            </div>
-
-            <div class="hero-card">
-                <div class="code-window">
-                    <div class="window-bar">
-                        <div class="window-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                        <p>developer.js</p>
-                    </div>
-
-                    <pre><code><span class="code-purple">const</span> developer = {
+      <div class="hero-visual" aria-label="A short introduction to my development focus">
+        <div class="code-card">
+          <div class="code-card-header">
+            <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span>developer.js</span>
+            <span class="code-card-label">PROFILE</span>
+          </div>
+          <pre><code><span class="code-purple">const</span> developer = {
   name: <span class="code-green">"Wizzy"</span>,
-  qualification: <span class="code-green">"HND"</span>,
   focus: <span class="code-green">"Backend Development"</span>,
-
-  technologies: [
+  learning: [
     <span class="code-green">"Node.js"</span>,
     <span class="code-green">"Express.js"</span>,
     <span class="code-green">"MongoDB"</span>
   ],
-
-  goals: <span class="code-green">"Build useful software"</span>
+  practice: [
+    <span class="code-green">"REST APIs"</span>,
+    <span class="code-green">"Authentication"</span>,
+    <span class="code-green">"API testing"</span>
+  ]
 };</code></pre>
-                </div>
-
-                <div class="hero-note">
-                    <span class="note-icon">{ }</span>
-                    <div>
-                        <strong>Build. Test. Improve.</strong>
-                        <p>Learning by building real projects.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="section container" id="about">
-            <p class="eyebrow">A LITTLE ABOUT ME</p>
-            <h2 class="section-title">About <span>Me</span></h2>
-
-            <div class="about-content">
-                <p>
-                    My name is Fiyinfoluwa Aladetoye, also known as Wizzy.
-                    I have completed my HND in Software and Web Development
-                    and am focused on growing as a backend developer.
-                </p>
-
-                <p>
-                    I'm developing practical experience with Node.js,
-                    Express.js, MongoDB, REST APIs, authentication,
-                    validation, and database operations. I enjoy learning
-                    how applications work behind the scenes and how to
-                    make them reliable, maintainable, and secure.
-                </p>
-
-                <p>
-                    I'm looking for opportunities to learn from experienced
-                    developers, contribute to meaningful projects, and
-                    continue growing in backend engineering.
-                </p>
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section class="section section-alt" id="skills">
-            <div class="container">
-                <p class="eyebrow">MY TECHNICAL TOOLKIT</p>
-                <h2 class="section-title">Skills & <span>Technologies</span></h2>
-
-                <p class="section-description">
-                    Technologies I'm learning and using in my development practice.
-                </p>
-
-                <div class="skills-grid">
-                    <article class="skill-card">
-                        <span class="skill-icon">JS</span>
-                        <h3>JavaScript</h3>
-                        <p>Backend fundamentals, functions, async code, and modules.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-icon">N</span>
-                        <h3>Node.js</h3>
-                        <p>Server-side JavaScript and application development.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-icon">EX</span>
-                        <h3>Express.js</h3>
-                        <p>REST API routes, middleware, controllers, and error handling.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-icon">DB</span>
-                        <h3>MongoDB</h3>
-                        <p>Working with databases, collections, and documents.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-icon">MG</span>
-                        <h3>Mongoose</h3>
-                        <p>Models, schemas, validation, and database operations.</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-icon">GT</span>
-                        <h3>Developer Tools</h3>
-                        <p>Git, GitHub, Postman, PowerShell, and VS Code.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section class="section container" id="projects">
-            <p class="eyebrow">WHAT I'VE BEEN BUILDING</p>
-            <h2 class="section-title">Featured <span>Projects</span></h2>
-
-            <p class="section-description">
-                A selection of my backend and software development practice projects.
-                Some are still being developed and improved.
-            </p>
-
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-icon">01</span>
-                        <span class="project-status">In development</span>
-                    </div>
-
-                    <h3>EventHorizon API</h3>
-
-                    <p>
-                        A user-account REST API for a tech-meetup platform,
-                        with registration, email verification, login,
-                        and authentication features.
-                    </p>
-
-                    <div class="tech-tags">
-                        <span>Node.js</span>
-                        <span>Express</span>
-                        <span>MongoDB</span>
-                        <span>JWT</span>
-                    </div>
-
-                    <a class="project-link"
-                       href="https://github.com/wisdomalade"
-                       target="_blank" rel="noopener noreferrer">
-                        Find project on GitHub <span>↗</span>
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-icon">02</span>
-                        <span class="project-status">Practice project</span>
-                    </div>
-
-                    <h3>Ghost Student API</h3>
-
-                    <p>
-                        A student-management API for creating, searching,
-                        updating, and validating student records in a database.
-                    </p>
-
-                    <div class="tech-tags">
-                        <span>Node.js</span>
-                        <span>Express</span>
-                        <span>Mongoose</span>
-                        <span>REST API</span>
-                    </div>
-
-                    <a class="project-link"
-                       href="https://github.com/wisdomalade"
-                       target="_blank" rel="noopener noreferrer">
-                        Find project on GitHub <span>↗</span>
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-icon">03</span>
-                        <span class="project-status">Practice project</span>
-                    </div>
-
-                    <h3>MVC Practice</h3>
-
-                    <p>
-                        A practice project exploring the Model-View-Controller
-                        pattern and a more organised application structure.
-                    </p>
-
-                    <div class="tech-tags">
-                        <span>JavaScript</span>
-                        <span>Node.js</span>
-                        <span>Git</span>
-                    </div>
-
-                    <a class="project-link"
-                       href="https://github.com/wisdomalade/mvc-practice"
-                       target="_blank" rel="noopener noreferrer">
-                        View repository <span>↗</span>
-                    </a>
-                </article>
-            </div>
-
-            <div class="projects-footer">
-                <a class="btn btn-outline"
-                   href="https://github.com/wisdomalade"
-                   target="_blank" rel="noopener noreferrer">
-                    Explore My GitHub
-                </a>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="section contact-section" id="contact">
-            <div class="container contact-content">
-                <p class="eyebrow">LET'S CONNECT</p>
-
-                <h2 class="section-title">
-                    Let's build something <span>meaningful.</span>
-                </h2>
-
-                <p class="section-description">
-                    I'm open to junior backend development opportunities,
-                    internships, collaborations, and connecting with
-                    other developers.
-                </p>
-
-                <a class="btn btn-primary email-button"
-                   href="mailto:aladetoyetoyefiyinfolwaomo@gmail.com">
-                    Send Me an Email
-                </a>
-
-                <div class="social-links">
-                    <a href="https://github.com/wisdomalade"
-                       target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-
-                    <a href="https://x.com/wizzyalade"
-                       target="_blank" rel="noopener noreferrer">X ↗</a>
-
-                    <a href="https://www.instagram.com/wizzyalade/"
-                       target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-
-                    <!-- Replace #linkedin with your actual LinkedIn profile URL. -->
-                    <a href="#linkedin" id="linkedin-link">LinkedIn</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-content">
-            <a href="#home" class="logo">Wizzy<span>.</span></a>
-            <p>© <span id="year"></span> Fiyinfoluwa Aladetoye. Built with HTML, CSS and JavaScript.</p>
-            <a href="#home" class="back-to-top">Back to top ↑</a>
+          <div class="code-card-footer"><span class="status-dot" aria-hidden="true"></span> Learning by building and testing</div>
         </div>
-    </footer>
+        <div class="hero-note">
+          <span class="note-symbol" aria-hidden="true">{ }</span>
+          <div><strong>Build. Test. Improve.</strong><p>Small steps, practical projects, steady progress.</p></div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section container section-anchor" id="about" aria-labelledby="about-title">
+      <p class="eyebrow">A LITTLE ABOUT ME</p>
+      <h2 class="section-title" id="about-title">Growing through <span>practical work.</span></h2>
+      <div class="about-layout">
+        <div class="about-lead"><p>I am an HND 2 student in Software and Web Development focused on becoming a dependable backend developer.</p></div>
+        <div class="about-details">
+          <p>I'm building practical experience with JavaScript, Node.js, Express.js, MongoDB, Mongoose, REST APIs, authentication, validation, and database operations. I enjoy understanding how applications work behind the scenes and how thoughtful error handling can make them easier to use.</p>
+          <p>My portfolio highlights learning projects and the evidence I have collected while testing them. I'm looking to learn from experienced developers, contribute to meaningful projects, and continue improving my engineering habits.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tinted section-anchor" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <p class="eyebrow">MY TECHNICAL TOOLKIT</p>
+        <h2 class="section-title" id="skills-title">Skills I'm <span>building.</span></h2>
+        <p class="section-intro">Tools and concepts I use or practise while developing backend applications.</p>
+        <div class="skills-grid">
+          <article class="skill-card"><span class="skill-mark">JS</span><h3>JavaScript</h3><p>Functions, modules, asynchronous code, and core language fundamentals.</p></article>
+          <article class="skill-card"><span class="skill-mark">N</span><h3>Node.js</h3><p>Server-side JavaScript and building application logic.</p></article>
+          <article class="skill-card"><span class="skill-mark">EX</span><h3>Express.js</h3><p>Routes, middleware, controllers, and HTTP error responses.</p></article>
+          <article class="skill-card"><span class="skill-mark">DB</span><h3>MongoDB</h3><p>Documents, collections, and storing application data.</p></article>
+          <article class="skill-card"><span class="skill-mark">MG</span><h3>Mongoose</h3><p>Models, schemas, validation, and database operations.</p></article>
+          <article class="skill-card"><span class="skill-mark">API</span><h3>API testing</h3><p>Using Postman to inspect requests, responses, and status codes.</p></article>
+          <article class="skill-card"><span class="skill-mark">JWT</span><h3>Authentication</h3><p>Learning registration, login, token-based access, and protected routes.</p></article>
+          <article class="skill-card"><span class="skill-mark">GT</span><h3>Developer tools</h3><p>Git, GitHub, Postman, PowerShell, and Visual Studio Code.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container section-anchor" id="projects" aria-labelledby="projects-title">
+      <p class="eyebrow">WHAT I'VE BEEN BUILDING</p>
+      <h2 class="section-title" id="projects-title">Featured <span>projects.</span></h2>
+      <p class="section-intro">A selection of backend and software-development practice projects. Project status describes my current work, not a claim that every feature is production-ready.</p>
+
+      <div class="projects-grid">
+        <article class="project-card project-card-featured">
+          <div class="project-meta"><span class="project-number">01</span><span class="project-status status-progress">In development</span></div>
+          <h3>EventHorizon API</h3>
+          <p>A user-account REST API for a tech-meetup platform. The project covers account registration, email verification, login, and authenticated profile access.</p>
+          <ul class="feature-list"><li>Authentication routes</li><li>MongoDB integration</li><li>Protected profile endpoint</li></ul>
+          <div class="tag-list"><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JWT</span></div>
+          <a class="text-link" href="https://github.com/wisdomalade/eventhorizon-api" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta"><span class="project-number">02</span><span class="project-status">Practice project</span></div>
+          <h3>Ghost Student API</h3>
+          <p>A student-management API for creating student records, updating course information, and handling invalid requests.</p>
+          <ul class="feature-list"><li>Create a student successfully</li><li>Update a student's course</li><li>Reject duplicate emails and invalid IDs</li></ul>
+          <div class="tag-list"><span>Node.js</span><span>Express.js</span><span>Mongoose</span><span>REST API</span><span>Postman</span></div>
+          <a class="text-link" href="https://github.com/wisdomalade/ghost-studentassignment" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="assets/Ghost_Student_Selected_Postman_Evidence.pdf" target="_blank" rel="noopener noreferrer">View Postman evidence (PDF) <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta"><span class="project-number">03</span><span class="project-status">Practice project</span></div>
+          <h3>MVC Practice</h3>
+          <p>A practice project exploring the Model-View-Controller pattern and a more organised way to separate application responsibilities.</p>
+          <ul class="feature-list"><li>Structured application files</li><li>Practice with separation of concerns</li></ul>
+          <div class="tag-list"><span>JavaScript</span><span>Node.js</span><span>MVC</span><span>Git</span></div>
+          <a class="text-link" href="https://github.com/wisdomalade/mvc-practice" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <div class="projects-footer"><a class="button button-secondary" href="https://github.com/wisdomalade" target="_blank" rel="noopener noreferrer">Explore my GitHub <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="section section-tinted section-anchor" id="evidence" aria-labelledby="evidence-title">
+      <div class="container">
+        <p class="eyebrow">GHOST STUDENT API</p>
+        <h2 class="section-title" id="evidence-title">API testing <span>evidence.</span></h2>
+        <p class="section-intro">Selected Postman evidence from the Ghost Student assignment, showing successful operations and expected error handling.</p>
+        <div class="evidence-grid">
+          <article class="evidence-card"><span class="http-code code-success">200 OK</span><h3>Create a student</h3><p>The API returns a successful response when a student record is created.</p></article>
+          <article class="evidence-card"><span class="http-code code-success">200 OK</span><h3>Update course</h3><p>The API confirms that a student's course was updated successfully.</p></article>
+          <article class="evidence-card"><span class="http-code code-conflict">409 Conflict</span><h3>Duplicate email</h3><p>A repeated email is rejected with an “Email already exists” response.</p></article>
+          <article class="evidence-card"><span class="http-code code-error">400 Bad Request</span><h3>Invalid student ID</h3><p>An invalid student ID is rejected with an “Invalid student id” response.</p></article>
+        </div>
+        <div class="evidence-callout">
+          <div><h3>See the Postman screenshots</h3><p>Open the four-page evidence document for the request and response examples.</p></div>
+          <a class="button button-primary" href="assets/Ghost_Student_Selected_Postman_Evidence.pdf" target="_blank" rel="noopener noreferrer">Open evidence PDF <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="fine-print">The screenshots show requests made to a local development server. They are testing evidence, not a public live API endpoint.</p>
+      </div>
+    </section>
+
+    <section class="section contact-section section-anchor" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-content">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2 class="section-title" id="contact-title">Let's build something <span>meaningful.</span></h2>
+        <p class="section-intro">I'm open to junior backend development opportunities, internships, collaborations, and connecting with other developers.</p>
+        <a class="button button-primary" href="mailto:aladetoyetoyefiyinfolwaomo@gmail.com">Send me an email <span aria-hidden="true">↗</span></a>
+        <div class="social-links" aria-label="Social profiles">
+          <a href="https://github.com/wisdomalade" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://x.com/wizzyalade" target="_blank" rel="noopener noreferrer">X ↗</a>
+          <a href="https://www.instagram.com/wizzyalade/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="logo" href="#home">Wizzy<span>.</span></a>
+      <p>© <span id="year"></span> Fiyinfoluwa Aladetoye. Built with HTML, CSS, and JavaScript.</p>
+      <a class="back-to-top" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
 </body>
 </html>
